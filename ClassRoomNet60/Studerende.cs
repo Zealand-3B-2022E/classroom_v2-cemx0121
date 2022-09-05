@@ -22,7 +22,38 @@ namespace ClassRoomNet60
 
         public override string ToString()
         {
-            return $"Navn: {Navn} | Fødselsdag(Dag/Måned): {Fødselsdag}/{Fødselsmåned}";
+            return $"Navn: {Navn} | Fødselsdag(Dag/Måned): {Fødselsdag}/{Fødselsmåned} | Årstid: {UdskrivÅrstidForFødselsdag()}";
+        }
+
+        public string UdskrivÅrstidForFødselsdag()
+        {
+            string årstid;
+            if (Fødselsmåned == 12 || Fødselsmåned == 1 || Fødselsmåned == 2)
+            {
+                årstid = "Vinter";
+            }
+            else if (Fødselsmåned == 3 || Fødselsmåned == 4 || Fødselsmåned == 5)
+            {
+                årstid = "Forår";
+            }
+            else if (Fødselsmåned == 6 || Fødselsmåned == 7 || Fødselsmåned == 8)
+            {
+                årstid = "Sommer";
+            }
+            else if (Fødselsmåned == 9 || Fødselsmåned == 10 || Fødselsmåned == 11)
+            {
+                årstid = "Efterår";
+            }
+            else
+            {
+                årstid = "Ugyldig fødselsmåned";
+            }
+            return årstid;
+        }
+
+        public void AntalFødselsdageIÅrstid()
+        {
+            
         }
     }
 }

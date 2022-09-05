@@ -22,5 +22,7 @@ namespace ClassRoomNet60
         {
             return $"Alle elever i dette klasserum med semesterstart: {SemesterStart.Day}/{SemesterStart.Month}-{SemesterStart.Year}";
         }
+
+
     }
 }
