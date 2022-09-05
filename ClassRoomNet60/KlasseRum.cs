@@ -17,5 +17,10 @@ namespace ClassRoomNet60
         {
             Klasseliste = new List<Studerende>();
         }
+
+        public override string ToString()
+        {
+            return $"Alle elever i dette klasserum med semesterstart: {SemesterStart.Day}/{SemesterStart.Month}-{SemesterStart.Year}";
+        }
     }
 }
